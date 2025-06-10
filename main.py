@@ -1,4 +1,13 @@
 import os
+from dotenv import load_dotenv
+
+# Загружаем переменные окружения из .env
+load_dotenv()
+
+# Получаем токен из переменной окружения
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+import os
 import json
 from dotenv import load_dotenv
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
@@ -67,3 +76,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+   
